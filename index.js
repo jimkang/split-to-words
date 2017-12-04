@@ -16,7 +16,10 @@ function splitChunksThatAreNotURLsEvenFurther(chunks) {
   for (var i = chunks.length - 1; i > -1; --i) {
     var chunk = chunks[i];
     if (chunk.indexOf('/') !== -1 && !chunk.match(urlRegex)) {
-      chunks.splice.apply(chunks, [i, 1].concat(chunk.split(wordBoundariesInURLsRegex)));
+      chunks.splice.apply(
+        chunks,
+        [i, 1].concat(chunk.split(wordBoundariesInURLsRegex))
+      );
     }
   }
   return chunks;
