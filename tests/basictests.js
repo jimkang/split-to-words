@@ -8,11 +8,15 @@ var testCases = [
   },
   {
     text: 'So @username\'s app uses @othername. Here is a url: http://yo.com/2345/#/single-page-app  Cool, amirite?',
-    expected: [ 'So', '@username\'s', 'app', 'uses', '@othername.', 'Here', 'is', 'a', 'url:', 'http://yo.com/2345/#/single-page-app', 'Cool', 'amirite' ]
+    expected: [ 'So', '@username\'s', 'app', 'uses', '@othername', 'Here', 'is', 'a', 'url:', 'http://yo.com/2345/#/single-page-app', 'Cool', 'amirite' ]
   },
   {
     text: 'If a sentence follows this sentence, it is not true. The previous sentence is true.',
-    expected: [ 'If', 'a', 'sentence', 'follows', 'this', 'sentence', 'it', 'is', 'not', 'true.', 'The', 'previous', 'sentence', 'is', 'true.' ]
+    expected: [ 'If', 'a', 'sentence', 'follows', 'this', 'sentence', 'it', 'is', 'not', 'true', 'The', 'previous', 'sentence', 'is', 'true' ]
+  },
+  {
+    text: 'What a terrible crash.',
+    expected: ['What', 'a', 'terrible', 'crash']
   }
 ];
 

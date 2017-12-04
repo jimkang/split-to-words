@@ -1,5 +1,7 @@
 var compact = require('lodash.compact');
 // \W will match apostrophes, unfortunately.
+// If you include \. in basicWordBoundaryRegex, it will split URLs apart, so
+// don't do that.
 var basicWordBoundaryRegex = /[ ",;!?]/;
 var wordBoundariesInURLsRegex = /[.\/:\-_#]/;
 var urlRegex = /http.?:\/\/[^\s]+/;
@@ -7,7 +9,7 @@ var urlRegex = /http.?:\/\/[^\s]+/;
 function splitToWords(text) {
   var chunks = compact(text.split(basicWordBoundaryRegex));
   chunks = splitChunksThatAreNotURLsEvenFurther(chunks);
-  return chunks;
+  return chunks.map(dropClosingPeriod);
 }
 
 function splitChunksThatAreNotURLsEvenFurther(chunks) {
@@ -18,6 +20,16 @@ function splitChunksThatAreNotURLsEvenFurther(chunks) {
     }
   }
   return chunks;
+}
+
+function dropClosingPeriod(s) {
+  var cleaned = s;
+  if (s.length > 0) {
+    if (s.charAt(s.length - 1) === '.') {
+      cleaned = s.substr(0, s.length - 1);
+    }
+  }
+  return cleaned;
 }
 
 module.exports = splitToWords;
