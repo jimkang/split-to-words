@@ -77,6 +77,10 @@ var testCases = [
   {
     text: 'What a terrible crash.',
     expected: ['What', 'a', 'terrible', 'crash']
+  },
+  {
+    text: '"Split" to words',
+    expected: ['"Split"', 'to', 'words']
   }
 ];
 

@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/jimkang/split-to-words",
   "devDependencies": {
-    "tape": "^5.0.1"
+    "tape": "^5.0.1",
+    "eslint": "7.16.0"
   },
   "dependencies": {
     "lodash.compact": "^3.0.1"
