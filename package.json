@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jimkang/split-to-words",
   "devDependencies": {
-    "tape": "^3.0.3"
+    "tape": "^5.0.1"
   },
   "dependencies": {
     "lodash.compact": "^3.0.1"
