@@ -81,6 +81,10 @@ var testCases = [
   {
     text: '"Split" to words',
     expected: ['"Split"', 'to', 'words']
+  },
+  {
+    text: 'The last period in S.O.S. is part of the word.',
+    expected: ['The', 'last', 'period', 'in', 'S.O.S.', 'is', 'part', 'of', 'the', 'word']
   }
 ];
 
