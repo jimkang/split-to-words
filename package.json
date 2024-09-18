@@ -1,6 +1,6 @@
 {
   "name": "split-to-words",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Split a sentence to words.",
   "main": "index.js",
   "scripts": {
